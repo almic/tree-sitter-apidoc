@@ -1,0 +1,973 @@
+==========
+@api
+==========
+
+/**
+ * @api
+ */
+
+---
+
+(apidoc (api))
+
+==========
+@api with leading description
+==========
+
+/**
+ * Some extra text
+ * @api
+ */
+
+---
+
+(apidoc
+    (description)
+    (api)
+)
+
+==========
+multiple @api tags
+==========
+
+/**
+ * @api
+ * @api
+ */
+
+---
+
+(apidoc
+    (api)
+    (api)
+)
+
+==========
+no syntax without @api tags
+==========
+
+/**
+ * there are no tags here
+ * @something else
+ * @dont (parse) {this} stuff
+ */
+
+---
+
+(ERROR (UNEXPECTED 's') (UNEXPECTED 'd'))
+
+==========
+@api method
+==========
+
+/**
+ * @api {get}
+ */
+
+---
+
+(apidoc
+    (api (method))
+)
+
+==========
+@api method path
+==========
+
+/**
+ * @api {get} /path:id
+ */
+
+---
+
+(apidoc
+    (api (method) (path))
+)
+
+==========
+@api method path title
+==========
+
+/**
+ * @api {get} /path:id Title goes here
+ */
+
+---
+
+(apidoc
+    (api (method) (path) (title))
+)
+
+==========
+@apiIgnore
+==========
+
+/**
+ * @apiIgnore
+ */
+
+---
+
+(apidoc (ignore))
+
+==========
+@apiIgnore with text
+==========
+
+/**
+ * @apiIgnore extra text
+ */
+
+---
+
+(apidoc
+    (ignore (description))
+)
+
+==========
+@apiDefine
+==========
+
+/**
+ * @apiDefine
+ */
+
+---
+
+(apidoc (define))
+
+==========
+@apiDefine name
+==========
+
+/**
+ * @apiDefine name_here
+ */
+
+---
+
+(apidoc
+    (define (name))
+)
+
+==========
+@apiDefine name title
+==========
+
+/**
+ * @apiDefine name This is a title
+ */
+
+---
+
+(apidoc
+    (define (name) (title))
+)
+
+==========
+@apiDeprecated with text
+==========
+
+/**
+ * @apiDeprecated Some description text
+ */
+
+---
+
+(apidoc
+    (deprecated (description))
+)
+
+==========
+@apiDescription
+==========
+
+/**
+ * @apiDescription some text
+ */
+
+---
+
+(apidoc
+    (apidescription (description))
+)
+
+==========
+@apiError
+==========
+
+/**
+ * @apiError
+ */
+
+---
+
+(apidoc
+    (apierror)
+)
+
+==========
+@apiError group
+==========
+
+/**
+ * @apiError (group name)
+ */
+
+---
+
+(apidoc
+    (apierror (group))
+)
+
+==========
+@apiError group type
+==========
+
+/**
+ * @apiError (group name) {Type Name}
+ */
+
+---
+
+(apidoc
+    (apierror (group) (type))
+)
+
+==========
+@apiError group type name
+==========
+
+/**
+ * @apiError (group name) {Type Name} name_here
+ */
+
+---
+
+(apidoc
+    (apierror (group) (type) (name))
+)
+
+==========
+@apiError group type name description
+==========
+
+/**
+ * @apiError (group name) {Type Name} name_here Some extra description text
+ */
+
+---
+
+(apidoc
+    (apierror (group) (type) (name) (description))
+)
+
+==========
+@apiErrorExample
+==========
+
+/**
+ * @apiErrorExample
+ */
+
+---
+
+(apidoc
+    (errorexample)
+)
+
+==========
+@apiErrorExample type
+==========
+
+/**
+ * @apiErrorExample {type}
+ */
+
+---
+
+(apidoc
+    (errorexample (type))
+)
+
+==========
+@apiErrorExample type title
+==========
+
+/**
+ * @apiErrorExample {type} Error Title
+ */
+
+---
+
+(apidoc
+    (errorexample (type) (title))
+)
+
+==========
+@apiExample
+==========
+
+/**
+ * @apiExample
+ */
+
+---
+
+(apidoc
+    (example)
+)
+
+==========
+@apiExample type
+==========
+
+/**
+ * @apiExample {type}
+ */
+
+---
+
+(apidoc
+    (example (type))
+)
+
+==========
+@apiExample type title
+==========
+
+/**
+ * @apiExample {type} Example Title
+ */
+
+---
+
+(apidoc
+    (example (type) (title))
+)
+
+==========
+@apiGroup
+==========
+
+/**
+ * @apiGroup
+ */
+
+---
+
+(apidoc
+    (apigroup)
+)
+
+==========
+@apiGroup name
+==========
+
+/**
+ * @apiGroup Name here
+ */
+
+---
+
+(apidoc
+    (apigroup (title))
+)
+
+==========
+@apiHeader
+==========
+
+/**
+ * @apiHeader
+ */
+
+---
+
+(apidoc
+    (header)
+)
+
+==========
+@apiHeader group
+==========
+
+/**
+ * @apiHeader (group name)
+ */
+
+---
+
+(apidoc
+    (header (group))
+)
+
+==========
+@apiHeader group type
+==========
+
+/**
+ * @apiHeader (group name) {type}
+ */
+
+---
+
+(apidoc
+    (header (group) (type))
+)
+
+==========
+@apiHeader group type param
+==========
+
+/**
+ * @apiHeader (group name) {type} parameter
+ */
+
+---
+
+(apidoc
+    (header (group) (type) (parameter (name)))
+)
+
+==========
+@apiHeader group type [param]
+==========
+
+/**
+ * @apiHeader (group name) {type} [parameter]
+ */
+
+---
+
+(apidoc
+    (header
+        (group)
+        (type)
+        (parameter
+            (optional
+                (name)
+            )
+        )
+    )
+)
+
+==========
+@apiHeader group type [param with default]
+==========
+
+/**
+ * @apiHeader (group name) {type} [parameter={"some", "values"}]
+ */
+
+---
+
+(apidoc
+    (header
+        (group)
+        (type)
+        (parameter
+            (optional
+                (name)
+                (default)
+            )
+        )
+    )
+)
+
+==========
+@apiHeaderExample
+==========
+
+/**
+ * @apiHeaderExample
+ */
+
+---
+
+(apidoc
+    (headerexample)
+)
+
+==========
+@apiHeaderExample type
+==========
+
+/**
+ * @apiHeaderExample {type}
+ */
+
+---
+
+(apidoc
+    (headerexample (type))
+)
+
+==========
+@apiHeaderExample type title
+==========
+
+/**
+ * @apiHeaderExample {type} Example Title
+ */
+
+---
+
+(apidoc
+    (headerexample (type) (title))
+)
+
+==========
+@apiName
+==========
+
+/**
+ * @apiName
+ */
+
+---
+
+(apidoc
+    (apiname)
+)
+
+==========
+@apiName name
+==========
+
+/**
+ * @apiName Name here
+ */
+
+---
+
+(apidoc
+    (apiname (name))
+)
+
+==========
+@apiParam
+==========
+
+/**
+ * @apiParam
+ */
+
+---
+
+(apidoc
+    (apiparam)
+)
+
+==========
+@apiParam group
+==========
+
+/**
+ * @apiParam (group name)
+ */
+
+---
+
+(apidoc
+    (apiparam (group))
+)
+
+==========
+@apiParam group type
+==========
+
+/**
+ * @apiParam (group name) {type}
+ */
+
+---
+
+(apidoc
+    (apiparam (group) (type))
+)
+
+==========
+@apiParam group type param
+==========
+
+/**
+ * @apiParam (group name) {type} parameter
+ */
+
+---
+
+(apidoc
+    (apiparam (group) (type) (parameter (name)))
+)
+
+==========
+@apiParam group type [param]
+==========
+
+/**
+ * @apiParam (group name) {type} [parameter]
+ */
+
+---
+
+(apidoc
+    (apiparam
+        (group)
+        (type)
+        (parameter
+            (optional
+                (name)
+            )
+        )
+    )
+)
+
+==========
+@apiParam group type [param with default]
+==========
+
+/**
+ * @apiParam (group name) {type} [parameter={"some", "values"}]
+ */
+
+---
+
+(apidoc
+    (apiparam
+        (group)
+        (type)
+        (parameter
+            (optional
+                (name)
+                (default)
+            )
+        )
+    )
+)
+
+==========
+@apiParamExample
+==========
+
+/**
+ * @apiParamExample
+ */
+
+---
+
+(apidoc
+    (paramexample)
+)
+
+==========
+@apiParamExample type
+==========
+
+/**
+ * @apiParamExample {type}
+ */
+
+---
+
+(apidoc
+    (paramexample (type))
+)
+
+==========
+@apiParamExample type title
+==========
+
+/**
+ * @apiParamExample {type} Example Title
+ */
+
+---
+
+(apidoc
+    (paramexample (type) (title))
+)
+
+==========
+@apiPermission
+==========
+
+/**
+ * @apiPermission
+ */
+
+---
+
+(apidoc
+    (permission)
+)
+
+==========
+@apiPermission name
+==========
+
+/**
+ * @apiPermission name here
+ */
+
+---
+
+(apidoc
+    (permission (name))
+)
+
+==========
+@apiPrivate
+==========
+
+/**
+ * @apiPrivate some extra text
+ */
+
+---
+
+(apidoc
+    (private (description))
+)
+
+==========
+@apiSampleRequest
+==========
+
+/**
+ * @apiSampleRequest
+ */
+
+---
+
+(apidoc
+    (samplerequest)
+)
+
+==========
+@apiSampleRequest url
+==========
+
+/**
+ * @apiSampleRequest http://www.example.com/path:id
+ */
+
+---
+
+(apidoc
+    (samplerequest (url))
+)
+
+==========
+@apiSampleRequest path
+==========
+
+/**
+ * @apiSampleRequest /path:id
+ */
+
+---
+
+(apidoc
+    (samplerequest (path))
+)
+
+==========
+@apiSampleRequest off
+==========
+
+/**
+ * @apiSampleRequest off
+ */
+
+---
+
+(apidoc
+    (samplerequest (default))
+)
+
+==========
+@apiSuccess
+==========
+
+/**
+ * @apiSuccess
+ */
+
+---
+
+(apidoc
+    (success)
+)
+
+==========
+@apiSuccess group
+==========
+
+/**
+ * @apiSuccess (group name)
+ */
+
+---
+
+(apidoc
+    (success (group))
+)
+
+==========
+@apiSuccess group type
+==========
+
+/**
+ * @apiSuccess (group name) {Type Name}
+ */
+
+---
+
+(apidoc
+    (success (group) (type))
+)
+
+==========
+@apiSuccess group type name
+==========
+
+/**
+ * @apiSuccess (group name) {Type Name} name_here
+ */
+
+---
+
+(apidoc
+    (success (group) (type) (name))
+)
+
+==========
+@apiSuccess group type name description
+==========
+
+/**
+ * @apiSuccess (group name) {Type Name} name_here Some extra description text
+ */
+
+---
+
+(apidoc
+    (success (group) (type) (name) (description))
+)
+
+==========
+@apiSuccessExample
+==========
+
+/**
+ * @apiSuccessExample
+ */
+
+---
+
+(apidoc
+    (successexample)
+)
+
+==========
+@apiSuccessExample type
+==========
+
+/**
+ * @apiSuccessExample {type}
+ */
+
+---
+
+(apidoc
+    (successexample (type))
+)
+
+==========
+@apiSuccessExample type title
+==========
+
+/**
+ * @apiSuccessExample {type} Success Title
+ */
+
+---
+
+(apidoc
+    (successexample (type) (title))
+)
+
+==========
+@apiUse
+==========
+
+/**
+ * @apiUse
+ */
+
+---
+
+(apidoc
+    (apiuse)
+)
+
+==========
+@apiUse name
+==========
+
+/**
+ * @apiUse name here
+ */
+
+---
+
+(apidoc
+    (apiuse (name))
+)
+
+==========
+@apiVersion
+==========
+
+/**
+ * @apiVersion
+ */
+
+---
+
+(apidoc
+    (version)
+)
+
+==========
+@apiVersion semver
+==========
+
+/**
+ * please never use a version name like this
+ * @apiVersion 0.2.67-28-testversion.0ne.-noice+abcdef0123456789.version2
+ */
+
+---
+
+(apidoc
+    (description)
+    (version (default))
+)
+
+==========
+@apiVersion other
+==========
+
+/**
+ * please don't use a version like this either
+ * @apiVersion v5
+ */
+
+---
+
+(apidoc
+    (description)
+    (version (name))
+)

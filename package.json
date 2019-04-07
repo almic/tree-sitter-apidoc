@@ -1,0 +1,30 @@
+{
+  "name": "tree-sitter-apidoc",
+  "version": "0.1.0",
+  "description": "The tree sitter parser for apiDoc syntax highlighting",
+  "keywords": [
+    "tree-sitter",
+    "apidoc",
+    "api",
+    "doc"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/almic/tree-sitter-apidoc.git"
+  },
+  "author": "almic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/almic/tree-sitter-apidoc/issues"
+  },
+  "homepage": "https://github.com/almic/tree-sitter-apidoc",
+  "dependencies": {
+    "nan": "^2.13.2"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.15.1"
+  },
+  "scripts": {
+    "test": "tree-sitter generate && tree-sitter test"
+  }
+}

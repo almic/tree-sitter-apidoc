@@ -1,0 +1,311 @@
+[
+  {
+    "type": "api",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "apidescription",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "apidoc",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "apierror",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "apigroup",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "apiname",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "apiparam",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "apiuse",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "default",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "define",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "deprecated",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "description",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "errorexample",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "example",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "group",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "header",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "headerexample",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "ignore",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "method",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "name",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "optional",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "parameter",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "paramexample",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "path",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "permission",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "private",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "samplerequest",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "success",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "successexample",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "title",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "type",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "url",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "version",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "@api",
+    "named": false
+  },
+  {
+    "type": "@apiIgnore",
+    "named": false
+  },
+  {
+    "type": "@apiDefine",
+    "named": false
+  },
+  {
+    "type": "@apiDeprecated",
+    "named": false
+  },
+  {
+    "type": "@apiDescription",
+    "named": false
+  },
+  {
+    "type": "@apiError",
+    "named": false
+  },
+  {
+    "type": "@apiErrorExample",
+    "named": false
+  },
+  {
+    "type": "@apiExample",
+    "named": false
+  },
+  {
+    "type": "@apiGroup",
+    "named": false
+  },
+  {
+    "type": "@apiHeader",
+    "named": false
+  },
+  {
+    "type": "@apiHeaderExample",
+    "named": false
+  },
+  {
+    "type": "@apiName",
+    "named": false
+  },
+  {
+    "type": "@apiParam",
+    "named": false
+  },
+  {
+    "type": "@apiParamExample",
+    "named": false
+  },
+  {
+    "type": "@apiPermission",
+    "named": false
+  },
+  {
+    "type": "@apiPrivate",
+    "named": false
+  },
+  {
+    "type": "@apiSampleRequest",
+    "named": false
+  },
+  {
+    "type": "@apiSuccess",
+    "named": false
+  },
+  {
+    "type": "@apiSuccessExample",
+    "named": false
+  },
+  {
+    "type": "@apiUse",
+    "named": false
+  },
+  {
+    "type": "@apiVersion",
+    "named": false
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "get",
+    "named": false
+  },
+  {
+    "type": "head",
+    "named": false
+  },
+  {
+    "type": "post",
+    "named": false
+  },
+  {
+    "type": "put",
+    "named": false
+  },
+  {
+    "type": "delete",
+    "named": false
+  },
+  {
+    "type": "trace",
+    "named": false
+  },
+  {
+    "type": "options",
+    "named": false
+  },
+  {
+    "type": "connect",
+    "named": false
+  },
+  {
+    "type": "patch",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
+    "type": "]",
+    "named": false
+  },
+  {
+    "type": "",
+    "named": false
+  }
+]
