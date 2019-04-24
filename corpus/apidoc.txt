@@ -54,6 +54,32 @@ no syntax without @api tags
 (apidoc)
 
 ==========
+python highlighting
+==========
+
+"""
+@api
+"""
+
+---
+
+(apidoc (api))
+
+==========
+ruby highlighting
+==========
+
+=begin
+
+@api
+
+=end
+
+---
+
+(apidoc (api))
+
+==========
 @api method
 ==========
 
