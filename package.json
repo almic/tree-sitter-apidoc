@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-apidoc",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "The tree sitter parser for apiDoc syntax highlighting",
   "keywords": [
     "tree-sitter",
