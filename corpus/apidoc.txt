@@ -21,10 +21,7 @@
 
 ---
 
-(apidoc
-    (description)
-    (api)
-)
+(apidoc (api))
 
 ==========
 multiple @api tags
@@ -54,7 +51,7 @@ no syntax without @api tags
 
 ---
 
-(ERROR (UNEXPECTED 's') (UNEXPECTED 'd'))
+(apidoc)
 
 ==========
 @api method
@@ -67,7 +64,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (api (method))
+    (api) (method)
 )
 
 ==========
@@ -81,7 +78,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (api (method) (path))
+    (api) (method) (path)
 )
 
 ==========
@@ -95,7 +92,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (api (method) (path) (title))
+    (api) (method) (path) (title)
 )
 
 ==========
@@ -120,9 +117,7 @@ no syntax without @api tags
 
 ---
 
-(apidoc
-    (ignore (description))
-)
+(apidoc (ignore))
 
 ==========
 @apiDefine
@@ -147,7 +142,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (define (name))
+    (define) (name)
 )
 
 ==========
@@ -161,7 +156,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (define (name) (title))
+    (define) (name) (title)
 )
 
 ==========
@@ -174,9 +169,7 @@ no syntax without @api tags
 
 ---
 
-(apidoc
-    (deprecated (description))
-)
+(apidoc (deprecated))
 
 ==========
 @apiDescription
@@ -188,9 +181,7 @@ no syntax without @api tags
 
 ---
 
-(apidoc
-    (apidescription (description))
-)
+(apidoc (description))
 
 ==========
 @apiError
@@ -202,9 +193,7 @@ no syntax without @api tags
 
 ---
 
-(apidoc
-    (apierror)
-)
+(apidoc (error))
 
 ==========
 @apiError group
@@ -217,7 +206,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (apierror (group))
+    (error) (group)
 )
 
 ==========
@@ -231,7 +220,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (apierror (group) (type))
+    (error) (group) (type)
 )
 
 ==========
@@ -245,7 +234,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (apierror (group) (type) (name))
+    (error) (group) (type) (name)
 )
 
 ==========
@@ -259,7 +248,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (apierror (group) (type) (name) (description))
+    (error) (group) (type) (name)
 )
 
 ==========
@@ -272,9 +261,7 @@ no syntax without @api tags
 
 ---
 
-(apidoc
-    (errorexample)
-)
+(apidoc (errorexample))
 
 ==========
 @apiErrorExample type
@@ -287,7 +274,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (errorexample (type))
+    (errorexample) (type)
 )
 
 ==========
@@ -301,7 +288,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (errorexample (type) (title))
+    (errorexample) (type) (title)
 )
 
 ==========
@@ -314,9 +301,7 @@ no syntax without @api tags
 
 ---
 
-(apidoc
-    (example)
-)
+(apidoc (example))
 
 ==========
 @apiExample type
@@ -329,7 +314,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (example (type))
+    (example) (type)
 )
 
 ==========
@@ -343,7 +328,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (example (type) (title))
+    (example) (type) (title)
 )
 
 ==========
@@ -356,9 +341,7 @@ no syntax without @api tags
 
 ---
 
-(apidoc
-    (apigroup)
-)
+(apidoc (apigroup))
 
 ==========
 @apiGroup name
@@ -371,7 +354,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (apigroup (title))
+    (apigroup) (name)
 )
 
 ==========
@@ -384,9 +367,7 @@ no syntax without @api tags
 
 ---
 
-(apidoc
-    (header)
-)
+(apidoc (header))
 
 ==========
 @apiHeader group
@@ -399,7 +380,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (header (group))
+    (header) (group)
 )
 
 ==========
@@ -413,7 +394,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (header (group) (type))
+    (header) (group) (type)
 )
 
 ==========
@@ -427,7 +408,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (header (group) (type) (parameter (name)))
+    (header) (group) (type) (parameter (name))
 )
 
 ==========
@@ -441,15 +422,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (header
-        (group)
-        (type)
-        (parameter
-            (optional
-                (name)
-            )
-        )
-    )
+    (header) (group) (type) (parameter (optional (name)))
 )
 
 ==========
@@ -463,16 +436,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (header
-        (group)
-        (type)
-        (parameter
-            (optional
-                (name)
-                (default)
-            )
-        )
-    )
+    (header) (group) (type) (parameter (optional (name) (default)))
 )
 
 ==========
@@ -500,7 +464,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (headerexample (type))
+    (headerexample) (type)
 )
 
 ==========
@@ -514,7 +478,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (headerexample (type) (title))
+    (headerexample) (type) (title)
 )
 
 ==========
@@ -542,7 +506,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (apiname (name))
+    (apiname) (name)
 )
 
 ==========
@@ -556,7 +520,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (apiparam)
+    (param)
 )
 
 ==========
@@ -570,7 +534,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (apiparam (group))
+    (param) (group)
 )
 
 ==========
@@ -584,7 +548,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (apiparam (group) (type))
+    (param) (group) (type)
 )
 
 ==========
@@ -598,7 +562,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (apiparam (group) (type) (parameter (name)))
+    (param) (group) (type) (parameter (name))
 )
 
 ==========
@@ -612,15 +576,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (apiparam
-        (group)
-        (type)
-        (parameter
-            (optional
-                (name)
-            )
-        )
-    )
+    (param) (group) (type) (parameter (optional (name)))
 )
 
 ==========
@@ -634,16 +590,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (apiparam
-        (group)
-        (type)
-        (parameter
-            (optional
-                (name)
-                (default)
-            )
-        )
-    )
+    (param) (group) (type) (parameter (optional (name) (default)))
 )
 
 ==========
@@ -656,9 +603,7 @@ no syntax without @api tags
 
 ---
 
-(apidoc
-    (paramexample)
-)
+(apidoc (paramexample))
 
 ==========
 @apiParamExample type
@@ -671,7 +616,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (paramexample (type))
+    (paramexample) (type)
 )
 
 ==========
@@ -685,7 +630,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (paramexample (type) (title))
+    (paramexample) (type) (title)
 )
 
 ==========
@@ -698,9 +643,7 @@ no syntax without @api tags
 
 ---
 
-(apidoc
-    (permission)
-)
+(apidoc (permission))
 
 ==========
 @apiPermission name
@@ -713,7 +656,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (permission (name))
+    (permission) (name)
 )
 
 ==========
@@ -726,9 +669,7 @@ no syntax without @api tags
 
 ---
 
-(apidoc
-    (private (description))
-)
+(apidoc (private))
 
 ==========
 @apiSampleRequest
@@ -740,9 +681,7 @@ no syntax without @api tags
 
 ---
 
-(apidoc
-    (samplerequest)
-)
+(apidoc (samplerequest))
 
 ==========
 @apiSampleRequest url
@@ -755,7 +694,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (samplerequest (url))
+    (samplerequest) (url)
 )
 
 ==========
@@ -769,7 +708,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (samplerequest (path))
+    (samplerequest) (path)
 )
 
 ==========
@@ -783,7 +722,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (samplerequest (default))
+    (samplerequest) (off)
 )
 
 ==========
@@ -796,9 +735,7 @@ no syntax without @api tags
 
 ---
 
-(apidoc
-    (success)
-)
+(apidoc (success))
 
 ==========
 @apiSuccess group
@@ -811,7 +748,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (success (group))
+    (success) (group)
 )
 
 ==========
@@ -825,7 +762,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (success (group) (type))
+    (success) (group) (type)
 )
 
 ==========
@@ -839,7 +776,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (success (group) (type) (name))
+    (success) (group) (type) (name)
 )
 
 ==========
@@ -853,7 +790,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (success (group) (type) (name) (description))
+    (success) (group) (type) (name)
 )
 
 ==========
@@ -881,7 +818,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (successexample (type))
+    (successexample) (type)
 )
 
 ==========
@@ -895,7 +832,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (successexample (type) (title))
+    (successexample) (type) (title)
 )
 
 ==========
@@ -908,9 +845,7 @@ no syntax without @api tags
 
 ---
 
-(apidoc
-    (apiuse)
-)
+(apidoc (use))
 
 ==========
 @apiUse name
@@ -923,7 +858,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (apiuse (name))
+    (use) (name)
 )
 
 ==========
@@ -936,9 +871,7 @@ no syntax without @api tags
 
 ---
 
-(apidoc
-    (version)
-)
+(apidoc (version))
 
 ==========
 @apiVersion semver
@@ -952,8 +885,7 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (description)
-    (version (default))
+    (version) (semver)
 )
 
 ==========
@@ -968,6 +900,5 @@ no syntax without @api tags
 ---
 
 (apidoc
-    (description)
-    (version (name))
+    (version) (name)
 )
